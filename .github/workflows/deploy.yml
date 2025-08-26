@@ -3,7 +3,8 @@ name: Deploy to Arsys (SFTP)
 on:
   push:
     branches: [ "main" ]
-    workflow_dispatch:
+  workflow_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -21,11 +22,6 @@ jobs:
           port: 22
           local_path: "."
           remote_path: "/html/fichajes"
-          delete: false
-          exclude: >
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/vendor/**
-            **/*.log
-            **/.env
+          delete_remote_files: false   # sustituye 'delete'
+          sftp_only: true
+
