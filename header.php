@@ -43,8 +43,11 @@ declare(strict_types=1);
         <a href="index.php?page=admin_calendar" class="<?= (($_GET['page'] ?? '')==='admin_calendar') ? 'active' : '' ?>">Calendario</a>
         <a href="index.php?page=admin_schedules" class="<?= (($_GET['page'] ?? '')==='admin_schedules') ? 'active' : '' ?>">Horarios</a>
         <a href="index.php?page=admin_leave_requests" class="<?= (($_GET['page'] ?? '')==='admin_leave_requests') ? 'active' : '' ?>">Solicitudes</a>
-        <a href="index.php?page=admin_users" class="<?= (($_GET['page'] ?? '')==='admin_users') ? 'active' : '' ?>">👥 Usuarios</a>
-      <?php endif; ?>
+       <a href="index.php?page=admin_users"
+   class="<?= (($_GET['page'] ?? '')==='admin_users') ? 'active' : '' ?>">
+   🧑‍🤝‍🧑 Usuarios
+</a>
+>
 
       <a href="index.php?page=logout">Salir</a>
     </nav>
