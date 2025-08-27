@@ -1,5 +1,5 @@
 <?php
-// views/admin.php — Panel con tarjeta de Usuarios
+// views/admin.php — Panel principal del administrador
 declare(strict_types=1);
 require_role('admin');
 ?>
@@ -26,13 +26,13 @@ require_role('admin');
 
   <div class="card">
     <h3>🏖️ Solicitudes</h3>
-    <p class="small">Aprobar/rechazar vacaciones.</p>
+    <p class="small">Aprobar o rechazar solicitudes de vacaciones.</p>
     <a class="btn" href="index.php?page=admin_leave_requests">Gestionar Solicitudes</a>
   </div>
 
   <div class="card">
-    <h3>👥 Usuarios</h3>
-    <p class="small">Crear, editar, activar/desactivar y reset de contraseña.</p>
+    <h3>🧑‍🤝‍🧑 Usuarios</h3>
+    <p class="small">Crear, editar, activar/desactivar, asignar horarios y resetear contraseña.</p>
     <a class="btn" href="index.php?page=admin_users">Gestionar Usuarios</a>
   </div>
 </div>
