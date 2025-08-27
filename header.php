@@ -47,7 +47,6 @@ declare(strict_types=1);
    class="<?= (($_GET['page'] ?? '')==='admin_users') ? 'active' : '' ?>">
    🧑‍🤝‍🧑 Usuarios
 </a>
->
 
       <a href="index.php?page=logout">Salir</a>
     </nav>
