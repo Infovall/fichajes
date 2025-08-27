@@ -1,5 +1,6 @@
+
 <?php
-// header.php — Cabecera con menú (tema oscuro) y acceso a Usuarios (🧑‍🤝‍🧑)
+// header.php — Navegación con enlace a Usuarios
 declare(strict_types=1);
 ?>
 <!doctype html>
@@ -9,8 +10,6 @@ declare(strict_types=1);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ClockIt</title>
   <style>
-    /* Estilos mínimos, no intrusivos (modo oscuro) */
-    :root { color-scheme: dark; }
     body{margin:0;background:#0b1220;color:#e5e7eb;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
     a{color:#c7d2fe;text-decoration:none}
     a:hover{text-decoration:underline}
@@ -34,7 +33,6 @@ declare(strict_types=1);
     <div class="brand">⏱️ ClockIt</div>
     <nav class="menu">
       <a href="index.php" class="<?= (!isset($_GET['page']) || $_GET['page']==='') ? 'active' : '' ?>">Inicio</a>
-
       <?php if (has_role('employee')): ?>
         <a href="index.php?page=employee" class="<?= (($_GET['page'] ?? '')==='employee') ? 'active' : '' ?>">Portal empleado</a>
       <?php endif; ?>
@@ -45,8 +43,7 @@ declare(strict_types=1);
         <a href="index.php?page=admin_calendar" class="<?= (($_GET['page'] ?? '')==='admin_calendar') ? 'active' : '' ?>">Calendario</a>
         <a href="index.php?page=admin_schedules" class="<?= (($_GET['page'] ?? '')==='admin_schedules') ? 'active' : '' ?>">Horarios</a>
         <a href="index.php?page=admin_leave_requests" class="<?= (($_GET['page'] ?? '')==='admin_leave_requests') ? 'active' : '' ?>">Solicitudes</a>
-        <!-- NUEVO: Usuarios con icono más visible -->
-        <a href="index.php?page=admin_users" class="<?= (($_GET['page'] ?? '')==='admin_users') ? 'active' : '' ?>">🧑‍🤝‍🧑 Usuarios</a>
+        <a href="index.php?page=admin_users" class="<?= (($_GET['page'] ?? '')==='admin_users') ? 'active' : '' ?>">👥 Usuarios</a>
       <?php endif; ?>
 
       <a href="index.php?page=logout">Salir</a>
